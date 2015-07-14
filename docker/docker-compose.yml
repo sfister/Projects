@@ -1,0 +1,3 @@
+protege:
+        build -t protege:3.5 protege/.
+

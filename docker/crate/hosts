@@ -1,0 +1,35 @@
+127.0.0.1   localhost localhost.localdomain
+
+10.1.1.1   ariki1 ariki1.acenet.metocean.co.nz head1 udshost san-archive
+10.1.1.2   ariki2 ariki2.acenet.metocean.co.nz head2 dataserver graphserver
+
+10.1.1.11 putunga1 putunga1.acenet.metocean.co.nz gluster-san san-ops
+10.1.1.12 putunga2 putunga2.acenet.metocean.co.nz
+10.1.1.13 putunga3 putunga3.acenet.metocean.co.nz san-main
+10.1.1.14 putunga4 putunga4.acenet.metocean.co.nz san-spare
+
+10.1.1.51  tehi1 tehi1.acenet.metocean.co.nz repos.metocean.co.nz repository.metocean.co.nz
+
+10.1.1.101 toa01 toa01.acenet.metocean.co.nz node01
+10.1.1.102 toa02 toa02.acenet.metocean.co.nz node02
+10.1.1.103 toa03 toa03.acenet.metocean.co.nz node03
+10.1.1.104 toa04 toa04.acenet.metocean.co.nz node04
+10.1.1.105 toa05 toa05.acenet.metocean.co.nz node05
+
+10.1.1.151 hitori1 hitori1.acenet.metocean.co.nz
+10.1.1.152 hitori2 hitori2.acenet.metocean.co.nz
+10.1.1.153 hitori3 hitori3.acenet.metocean.co.nz
+10.1.1.154 hitori4 hitori4.acenet.metocean.co.nz
+10.1.1.155 hitori5 hitori5.acenet.metocean.co.nz
+10.1.1.157 tekau1 tekau1.acenet.metocean.co.nz
+10.1.1.158 tekau2 tekau2.acenet.metocean.co.nz
+
+10.1.1.201 katipo1 katipo1.acenet.metocean.co.nz san-tiles
+10.1.1.156 mako1 fchost obshost
+
+#68.171.219.18 repos.metocean.co.nz
+
+173.249.145.81 gds2.metocean.co.nz
+74.208.230.214 gds3.metocean.co.nz
+
+173.249.151.30 riwhi1.metocean.co.nz tileserver

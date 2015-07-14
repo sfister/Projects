@@ -1,0 +1,16 @@
+alive: steven-pc 192.168.2.59:8301
+alive: 5b9054836cea 172.17.0.3:8301
+clock: 198
+alive: d60f27097c71 172.17.0.221:8301
+alive: 149cb4eadfa0 172.17.0.4:8301
+alive: 5dff15ccb327 172.17.0.175:8301
+alive: 7e46a7fd682f 172.17.0.5:8301
+alive: 38eada7e7a8d 172.17.0.2:8301
+alive: 540ed4ae550b 172.17.0.220:8301
+alive: ffcbf2eb58a8 172.17.0.219:8301
+alive: 63f6519662bd 172.17.0.24:8301
+alive: 61cd0fa4f107 172.17.0.176:8301
+not-alive: 540ed4ae550b
+not-alive: d60f27097c71
+not-alive: ffcbf2eb58a8
+leave
