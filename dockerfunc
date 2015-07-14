@@ -1,0 +1,135 @@
+#!/bin/bash
+# bash wrappers for docker run commands
+
+# 
+# Helper Functions
+#
+dcleanup(){
+	docker rm $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+	docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+}
+del_stopped(){
+	local name=$1
+	local state=$(`docker inspect --format "{{.State.Running}}" $name 2>/dev/null`)
+
+	if [[ "$state" == "false" ]] || [[ "$state" !=  "<no value>" ]]; then
+		docker rm $name
+	fi
+}
+relies_on(){
+	local containers=$@
+
+	for container in $containers; do
+		local state=$(docker inspect --format "{{.State.Running}}" $container 2>/dev/null)
+
+		if [[ "$state" == "false" ]] || [[ "$state" == "" ]]; then
+			echo "$container is not running, starting it for you."
+			$container
+		fi
+	done
+}
+
+protege(){
+	del_stopped protege
+
+	docker run -d \
+		--memory 2gb \
+		--net host \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-e DISPLAY=unix$DISPLAY \
+		--name protege \
+		protege "/root/Protege_3.5/Protege"
+
+
+	# exit current shell
+	#exit 0
+}
+
+chrome(){
+	del_stopped chrome
+
+	docker run -it \
+		--memory 5gb \
+		--net host \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-e DISPLAY=unix$DISPLAY \
+		-v $HOME/Downloads:/root/Downloads \
+		-v $HOME/Pictures:/root/Pictures \
+		-v $HOME/Torrents:/root/Torrents \
+		-v $HOME/.chrome:/data \
+		--name chrome \
+		jess/chrome /bin/bash
+		#jess/chrome --user-data-dir=/data --force-device-scale-factor=1 "$@"
+
+	# exit current shell
+	#exit 0
+}
+
+firefox(){
+	del_stopped firefox
+
+	docker run -d \
+		--memory 5gb \
+		--net host \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-v $HOME/.firefox/mozilla:/root/.mozilla \
+		-v $HOME/.firefox/cache:/root/.cache/mozilla \
+		-v $HOME/Downloads:/root/Downloads \
+		-v $HOME/Pictures:/root/Pictures \
+		-e DISPLAY=unix$DISPLAY \
+		-e GDK_SCALE \
+		-e GDK_DPI_SCALE \
+		--name firefox \
+		devurandom/firefox "firefox"
+		
+
+	# exit current shell
+	#exit 0
+}
+gantt(){
+	del_stopped gantt
+
+	docker run -d \
+		--net host \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-e DISPLAY=unix$DISPLAY \
+		-v $HOME/projects:/root/projects \
+		-v $HOME/.ganttproject.d:/root/.ganttproject.d \
+		--name gantt \
+		sfister/gantt "/ganttproject-2.7-r1891/ganttproject"
+
+	# exit current shell
+	#exit 0
+}
+
+###
+### Awesome sauce by @jpetazzo
+###
+command_not_found_handle () {
+	# Check if there is a container image with that name
+	if ! docker inspect --format '{{ .Author }}' "$1" >&/dev/null ; then
+		echo "$0: $1: command not found"
+		return
+	fi
+
+	# Check that it's really the name of the image, not a prefix
+	if docker inspect --format '{{ .Id }}' "$1" | grep -q "^$1" ; then
+		echo "$0: $1: command not found"
+		return
+	fi
+
+	docker run -ti -u $(whoami) -w "$HOME" \
+		$(env | cut -d= -f1 | awk '{print "-e", $1}') \
+		--device /dev/snd \
+		-v /etc/passwd:/etc/passwd:ro \
+		-v /etc/group:/etc/group:ro \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /home:/home \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		"sfister/$@"
+}
+
