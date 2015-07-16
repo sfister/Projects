@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-06-24" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.7" locale="en_US">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-05-31" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.7" locale="en_US">
     <description/>
-    <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Name" width="57" order="0"/>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Name" width="56" order="0"/>
         <field id="tpd4" name="Begin date" width="21" order="1"/>
         <field id="tpd5" name="End date" width="21" order="2"/>
     </view>
     <view id="resource-table">
-        <field id="0" name="Name" width="50" order="0"/>
-        <field id="1" name="Default role" width="49" order="1"/>
+        <field id="0" name="Name" width="57" order="0"/>
+        <field id="1" name="Default role" width="42" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -34,14 +34,66 @@
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
         <task id="1" name="WXServer" color="#8cb6ce" meeting="false" start="2015-06-01" duration="60" complete="0" expand="true">
-            <task id="5" name="Renderer" color="#8cb6ce" meeting="false" start="2015-07-01" duration="10" complete="0" expand="true"/>
-            <task id="6" name="Framework" color="#8cb6ce" meeting="false" start="2015-06-01" duration="60" complete="0" expand="true"/>
+            <task id="5" name="Renderer" color="#8cb6ce" meeting="false" start="2015-07-01" duration="3" complete="0" expand="true"/>
+            <task id="19" name="Renderer P2" color="#8cb6ce" meeting="false" start="2015-07-27" duration="5" complete="0" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="6" name="Framework" color="#8cb6ce" meeting="false" start="2015-06-01" duration="60" complete="0" expand="true">
+                <depend id="11" type="2" difference="0" hardness="Strong"/>
+            </task>
             <task id="7" name="Unisys Project" meeting="false" start="2015-06-01" duration="60" complete="0" expand="true">
-                <task id="10" name="File Processing" color="#8cb6ce" meeting="false" start="2015-06-01" duration="60" complete="0" expand="true"/>
+                <task id="10" name="File Processing" color="#8cb6ce" meeting="false" start="2015-06-01" duration="60" complete="0" expand="true">
+                    <depend id="16" type="2" difference="0" hardness="Rubber"/>
+                </task>
             </task>
         </task>
-        <task id="3" name="task_5" meeting="false" start="2015-08-06" duration="1" complete="0" expand="true">
-            <task id="4" name="Model" meeting="false" start="2015-08-06" duration="1" complete="0" expand="true"/>
+        <task id="3" name="scheduler" meeting="false" start="2015-07-16" duration="82" complete="0" expand="true">
+            <task id="4" name="Model" color="#8cb6ce" meeting="false" start="2015-07-16" duration="7" complete="0" expand="true">
+                <depend id="19" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" name="Model P2" color="#8cb6ce" meeting="false" start="2015-08-03" duration="30" complete="0" expand="true">
+                <depend id="49" type="2" difference="0" hardness="Strong"/>
+                <depend id="77" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="27" name="WRF Model Wrapper" color="#8cb6ce" meeting="false" start="2015-07-21" duration="4" complete="0" expand="true"/>
+            <task id="28" name="WW4 Model Wrapper" color="#8cb6ce" meeting="false" start="2015-07-22" duration="4" complete="0" expand="true">
+                <depend id="40" type="2" difference="0" hardness="Rubber"/>
+            </task>
+            <task id="29" name="SWAN Model Wrapper" color="#8cb6ce" meeting="false" start="2015-07-20" duration="10" complete="0" expand="true"/>
+            <task id="30" name="ROMS Model Wrapper" color="#8cb6ce" meeting="false" start="2015-07-20" duration="10" complete="0" expand="true">
+                <depend id="31" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="31" name="POM Model Wrapper" color="#8cb6ce" meeting="false" start="2015-08-03" duration="10" complete="0" expand="true"/>
+            <task id="49" name="Downloads" color="#8cb6ce" meeting="false" start="2015-09-14" duration="20" complete="0" expand="true">
+                <depend id="50" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="50" name="Products" color="#8cb6ce" meeting="false" start="2015-10-12" duration="20" complete="0" expand="true"/>
+            <task id="77" name="Cloud Resource config" color="#8cb6ce" meeting="false" start="2015-09-14" duration="10" complete="0" expand="true">
+                <depend id="80" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="80" name="Disaster Recovery" color="#8cb6ce" meeting="false" start="2015-09-28" duration="30" complete="0" expand="true"/>
+        </task>
+        <task id="11" name="UDS - Distributed" color="#8cb6ce" meeting="false" start="2015-08-24" duration="30" complete="0" expand="true"/>
+        <task id="12" name="verify" meeting="false" start="2015-06-24" duration="1" complete="0" expand="true"/>
+        <task id="15" name="WW4 into production" color="#8cb6ce" meeting="false" start="2015-06-24" duration="20" complete="0" expand="true">
+            <depend id="28" type="2" difference="0" hardness="Rubber"/>
+        </task>
+        <task id="40" name="ST6 Physics into ww4" color="#8cb6ce" meeting="false" start="2015-07-28" duration="25" complete="0" expand="true"/>
+        <task id="16" name="MOS Scheme" color="#8cb6ce" meeting="false" start="2015-08-24" duration="30" complete="0" expand="true"/>
+        <task id="17" name="WEB Dev" meeting="false" start="2015-06-24" duration="1" complete="0" expand="true"/>
+        <task id="87" name="Lightning Strike Database" color="#8cb6ce" meeting="false" start="2015-06-22" duration="60" complete="0" expand="true"/>
+        <task id="90" name="gisPlugin" color="#8cb6ce" meeting="false" start="2015-06-01" duration="20" complete="0" expand="true"/>
+        <task id="94" name="Accuweather" meeting="false" start="2015-06-01" duration="100" complete="0" expand="true">
+            <task id="97" name="Meetings" color="#8cb6ce" meeting="false" start="2015-06-01" duration="100" complete="0" expand="true"/>
+        </task>
+        <task id="95" name="Weather Telematics" color="#000000" meeting="false" start="2015-06-01" duration="100" complete="0" expand="true">
+            <task id="99" name="Meetings" color="#8cb6ce" meeting="false" start="2015-06-01" duration="100" complete="0" expand="true"/>
+        </task>
+        <task id="105" name="Satellite data Feed" meeting="false" start="2015-07-06" duration="40" complete="0" expand="true">
+            <task id="109" name="Migrate Existing Satellite Feed" color="#8cb6ce" meeting="false" start="2015-07-06" duration="10" complete="0" expand="true">
+                <depend id="106" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="106" name="Himuana 8" color="#8cb6ce" meeting="false" start="2015-07-20" duration="30" complete="0" expand="true"/>
         </task>
     </tasks>
     <resources>
@@ -55,15 +107,44 @@
         <resource id="7" name="Rosa Trancoso" function="2" contacts="" phone=""/>
         <resource id="8" name="Thomas Coats" function="SoftwareDevelopment:9" contacts="" phone=""/>
         <resource id="9" name="Tim Gunn" function="SoftwareDevelopment:9" contacts="" phone=""/>
+        <resource id="10" name="Tom Durrant" function="2" contacts="" phone=""/>
+        <resource id="11" name="Steven Fister" function="Default:1" contacts="" phone=""/>
+        <resource id="12" name="Richard Law" function="SoftwareDevelopment:2" contacts="" phone=""/>
     </resources>
     <allocations>
         <allocation task-id="6" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="11" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="5" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
-        <allocation task-id="1" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="4" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="19" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="80" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="20.0"/>
+        <allocation task-id="77" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="20.0"/>
+        <allocation task-id="87" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="10.0"/>
         <allocation task-id="10" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="16" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="80" resource-id="3" function="1" responsible="false" load="20.0"/>
+        <allocation task-id="77" resource-id="3" function="1" responsible="false" load="50.0"/>
+        <allocation task-id="29" resource-id="4" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="29" resource-id="5" function="2" responsible="false" load="20.0"/>
+        <allocation task-id="30" resource-id="6" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="31" resource-id="6" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="106" resource-id="7" function="2" responsible="true" load="50.0"/>
+        <allocation task-id="109" resource-id="7" function="2" responsible="true" load="50.0"/>
+        <allocation task-id="15" resource-id="10" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="28" resource-id="10" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="40" resource-id="10" function="2" responsible="true" load="100.0"/>
+        <allocation task-id="80" resource-id="11" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="77" resource-id="11" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
+        <allocation task-id="87" resource-id="12" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="90" resource-id="12" function="SoftwareDevelopment:2" responsible="true" load="20.0"/>
+        <allocation task-id="99" resource-id="12" function="SoftwareDevelopment:2" responsible="true" load="2.0"/>
+        <allocation task-id="97" resource-id="12" function="SoftwareDevelopment:2" responsible="true" load="2.0"/>
     </allocations>
     <vacations>
         <vacation start="2015-07-04" end="2015-07-15" resourceid="1"/>
+        <vacation start="2015-08-01" end="2015-09-06" resourceid="4"/>
     </vacations>
     <taskdisplaycolumns>
         <displaycolumn property-id="tpd2" order="-1" width="75" visible="false"/>
@@ -76,9 +157,9 @@
         <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd1" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
-        <displaycolumn property-id="tpd3" order="0" width="199" visible="true"/>
-        <displaycolumn property-id="tpd4" order="1" width="75" visible="true"/>
-        <displaycolumn property-id="tpd5" order="2" width="75" visible="true"/>
+        <displaycolumn property-id="tpd3" order="0" width="190" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="72" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="72" visible="true"/>
     </taskdisplaycolumns>
     <previous/>
     <roles roleset-name="Default"/>

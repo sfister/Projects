@@ -49,19 +49,19 @@ protege(){
 chrome(){
 	del_stopped chrome
 
-	docker run -it \
+	docker run -d \
 		--memory 5gb \
 		--net host \
+		-c 25 \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix \
 		-e DISPLAY=unix$DISPLAY \
 		-v $HOME/Downloads:/root/Downloads \
 		-v $HOME/Pictures:/root/Pictures \
 		-v $HOME/Torrents:/root/Torrents \
-		-v $HOME/.chrome:/data \
+		-v $HOME/.chromed:/data \
 		--name chrome \
-		jess/chrome /bin/bash
-		#jess/chrome --user-data-dir=/data --force-device-scale-factor=1 "$@"
+		jess/chrome --user-data-dir=/data --force-device-scale-factor=1 "$@"
 
 	# exit current shell
 	#exit 0
@@ -72,6 +72,7 @@ firefox(){
 
 	docker run -d \
 		--memory 5gb \
+		-c 25 \
 		--net host \
 		-v /etc/localtime:/etc/localtime:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix \
