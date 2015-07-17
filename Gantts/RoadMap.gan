@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-05-31" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.7" locale="en_US">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-05-31" view-index="1" gantt-divider-location="353" resource-divider-location="300" version="2.7" locale="en_US">
     <description/>
     <view zooming-state="default:7" id="gantt-chart">
-        <field id="tpd3" name="Name" width="56" order="0"/>
-        <field id="tpd4" name="Begin date" width="21" order="1"/>
-        <field id="tpd5" name="End date" width="21" order="2"/>
+        <field id="tpd3" name="Name" width="55" order="0"/>
+        <field id="tpd4" name="Begin date" width="22" order="1"/>
+        <field id="tpd5" name="End date" width="22" order="2"/>
     </view>
     <view id="resource-table">
-        <field id="0" name="Name" width="57" order="0"/>
-        <field id="1" name="Default role" width="42" order="1"/>
+        <field id="0" name="Name" width="52" order="0"/>
+        <field id="1" name="Default role" width="47" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -95,6 +95,10 @@
             </task>
             <task id="106" name="Himuana 8" color="#8cb6ce" meeting="false" start="2015-07-20" duration="30" complete="0" expand="true"/>
         </task>
+        <task id="110" name="Astrix Server" color="#8cb6ce" meeting="false" start="2015-07-13" duration="10" complete="0" expand="true"/>
+        <task id="116" name="SysAdmin" color="#8cb6ce" meeting="false" start="2015-06-01" duration="1000" complete="0" expand="true"/>
+        <task id="112" name="System Documentation" color="#8cb6ce" meeting="false" start="2015-06-01" duration="90" complete="0" expand="true"/>
+        <task id="114" name="Reporting" color="#8cb6ce" meeting="false" start="2015-06-01" duration="120" complete="0" expand="true"/>
     </tasks>
     <resources>
         <resource id="0" name="Greg Chalmers" function="SoftwareDevelopment:2" contacts="" phone=""/>
@@ -126,6 +130,8 @@
         <allocation task-id="16" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
         <allocation task-id="80" resource-id="3" function="1" responsible="false" load="20.0"/>
         <allocation task-id="77" resource-id="3" function="1" responsible="false" load="50.0"/>
+        <allocation task-id="110" resource-id="3" function="1" responsible="true" load="80.0"/>
+        <allocation task-id="116" resource-id="3" function="1" responsible="true" load="20.0"/>
         <allocation task-id="29" resource-id="4" function="2" responsible="true" load="100.0"/>
         <allocation task-id="29" resource-id="5" function="2" responsible="false" load="20.0"/>
         <allocation task-id="30" resource-id="6" function="2" responsible="true" load="100.0"/>
@@ -137,6 +143,8 @@
         <allocation task-id="40" resource-id="10" function="2" responsible="true" load="100.0"/>
         <allocation task-id="80" resource-id="11" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
         <allocation task-id="77" resource-id="11" function="SoftwareDevelopment:2" responsible="false" load="50.0"/>
+        <allocation task-id="112" resource-id="11" function="Default:1" responsible="true" load="60.0"/>
+        <allocation task-id="114" resource-id="11" function="Default:1" responsible="true" load="30.0"/>
         <allocation task-id="87" resource-id="12" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
         <allocation task-id="90" resource-id="12" function="SoftwareDevelopment:2" responsible="true" load="20.0"/>
         <allocation task-id="99" resource-id="12" function="SoftwareDevelopment:2" responsible="true" load="2.0"/>
@@ -157,9 +165,9 @@
         <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd1" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
-        <displaycolumn property-id="tpd3" order="0" width="190" visible="true"/>
-        <displaycolumn property-id="tpd4" order="1" width="72" visible="true"/>
-        <displaycolumn property-id="tpd5" order="2" width="72" visible="true"/>
+        <displaycolumn property-id="tpd3" order="0" width="195" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="77" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="77" visible="true"/>
     </taskdisplaycolumns>
     <previous/>
     <roles roleset-name="Default"/>
