@@ -5,5 +5,5 @@ run apt-get install -y \
    wget \
    curl  
 
-RUN apt-get install -y firefox
+RUN apt-get install -y tar bzip2
 
