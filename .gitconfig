@@ -2,6 +2,8 @@
 	st = status
 	co = checkout
 	ec = config --global -e 
+	lb = branch --list
+	sb = branch -a
 	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
 	cob = checkout -b
 	cm = !git add -A && git commit -m
