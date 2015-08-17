@@ -1,0 +1,34 @@
+alias toa01='ssh metocean@toa01'
+alias toa02='ssh metocean@toa02'
+alias toa03='ssh metocean@toa03'
+alias toa04='ssh metocean@toa04'
+alias toa05='ssh metocean@toa05'
+alias hitori1='ssh metocean@hitori1'
+alias hitori2='ssh metocean@hitori2'
+alias hitori3='ssh metocean@hitori3'
+alias hitori4='ssh metocean@hitori4'
+alias hitori5='ssh metocean@hitori5'
+alias tekau1='ssh metocean@tekau1'
+alias mako1='ssh metocean@mako1'
+alias katipo1='ssh metocean@katipo1'
+alias putunga1='ssh metocean@putunga1'
+alias putunga2='ssh metocean@putunga2'
+alias putunga3='ssh metocean@putunga3'
+alias putunga4='ssh metocean@putunga4'
+alias ariki1='ssh metocean@ariki1'
+alias ariki2='ssh metocean@ariki2'
+
+alias tarua1='ssh metocean@tarua1'
+alias tarua2='ssh metocean@tarua2'
+
+alias riwhi1='ssh metocean@riwhi1'
+alias riwhi2='ssh metocean@riwhi2.metocean.co.nz'
+
+alias tehi1='ssh steven@tehi1'
+
+alias vhost1='ssh metocean@vhost1'
+alias vhost2='ssh metocean@vhost2'
+alias vhost3='ssh metocean@vhost3'
+
+alias sensorbuoy='xfreerdp -g 1920x1080 -u admin -p ka2moana --sec rdp 192.168.2.219'
+
