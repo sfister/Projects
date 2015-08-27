@@ -32,3 +32,7 @@ alias vhost3='ssh metocean@vhost3'
 
 alias sensorbuoy='xfreerdp -g 1920x1080 -u admin -p ka2moana --sec rdp 192.168.2.219'
 
+alias atest1='ssh metocean@45.79.222.112'
+alias atest2='ssh metocean@198.74.52.14'
+alias atest3='ssh metocean@45.79.212.110'
+
