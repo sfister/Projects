@@ -35,5 +35,6 @@ alias sensorbuoy='xfreerdp -g 1920x1080 -u admin -p ka2moana --sec rdp 192.168.2
 alias atest1='ssh metocean@45.79.222.112'
 alias atest2='ssh metocean@198.74.52.14'
 alias atest3='ssh metocean@45.79.212.110'
-starttunnel() { ssh -f metocean@45.79.222.112 -L 8888:$@:8888 -N; }
-
+starttunnel() { ssh -f metocean@45.79.222.112 -L $@ -N; }
+starttunnel2() { ssh -f metocean@198.74.52.14 -L $@ -N; }
+starttunnel3() { ssh -f metocean@45.79.212.110 -L $@ -N; }
