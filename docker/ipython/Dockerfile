@@ -12,3 +12,8 @@ RUN wget -O ui.zip http://dl.bintray.com/mitchellh/consul/0.5.2_web_ui.zip \
   && unzip ui.zip \
   && mv dist /consul-ui 
 
+RUN pip install cassandra-driver
+RUN pip install rethinkdb
+
+ADD startipython /startipython
+
