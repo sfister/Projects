@@ -107,6 +107,21 @@ gantt(){
 	#exit 0
 }
 
+vmwplayer(){
+	del_stopped vmplayer
+
+	docker run -d \
+		--net host \
+		-v /etc/localtime:/etc/localtime:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-e DISPLAY=unix$DISPLAY \
+		--name vmplayer \
+		sfister/vmwareplayer "/vmplayer"
+
+	# exit current shell
+	#exit 0
+}
+
 ###
 ### Awesome sauce by @jpetazzo
 ###

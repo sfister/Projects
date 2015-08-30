@@ -84,8 +84,3 @@ alias notebook="cd ~/notebooks && ipython notebook --ip=0.0.0.0"
 
 source ~/.machines
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
-source /usr/local/bin/virtualenvwrapper.sh
-source "$HOME/.rvm/scripts/rvm"
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
