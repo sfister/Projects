@@ -1,4 +1,9 @@
 curl 'http://10.181.2.1:9200/verify/_search?search_type=count&pretty' -d '{"size": 0,  "aggs": {"mycount": {"terms": {"field": "site", "size": 300000} } }}'
 
+curl 'http://10.181.2.1:9200/verify/_search?search_type=count&pretty' -d '{"size": 0,  "aggs": {"mycount": {"terms": {"field": "site", "size": 0, "order": {"_term": "asc"}} } }}'
+
+curl 'http://10.181.2.1:9200/verify/_search?search_type=count&pretty' -d '{"size": 0}'
+
+
 curl 'http://10.181.2.1:9200/verify/_field_stats?fields=site&pretty'
 
