@@ -4,6 +4,7 @@ curl 'http://10.181.2.1:9200/verify/_search?search_type=count&pretty' -d '{"size
 
 curl 'http://10.181.2.1:9200/verify/_search?search_type=count&pretty' -d '{"size": 0}'
 
+curl 'http://10.181.2.1:9200/verify/_search?pretty' -d '{"size": 0, "fields": "cycle"}'
 
 curl 'http://10.181.2.1:9200/verify/_field_stats?fields=site&pretty'
 
