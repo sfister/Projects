@@ -23,6 +23,10 @@ alias tarua2='ssh metocean@tarua2'
 
 alias riwhi1='ssh metocean@riwhi1'
 alias riwhi2='ssh metocean@riwhi2.metocean.co.nz'
+alias riwhi3='ssh metocean@riwhi3.metocean.co.nz'
+alias pata1='ssh metocean@pata1.acenet.metocean.co.nz'
+alias pata2='ssh metocean@pata2.acenet.metocean.co.nz'
+alias pata3='ssh metocean@pata3.acenet.metocean.co.nz'
 
 alias tehi1='ssh steven@tehi1'
 

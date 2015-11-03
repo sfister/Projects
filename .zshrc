@@ -82,5 +82,6 @@ source $ZSH/oh-my-zsh.sh
 export JAVA_HOME="/usr/java/latest"
 alias notebook="cd ~/notebooks && ipython notebook --ip=0.0.0.0"
 
+export PATH=$PATH:~/bin
 source ~/.machines
 
